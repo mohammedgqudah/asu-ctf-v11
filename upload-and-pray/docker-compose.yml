@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    ports:
+      - 30004:8000
+    environment:
+      FLAG: 'ASU{fake_flag}'

@@ -1,0 +1,56 @@
+*, body, head {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #eceff4;
+	font-family: Arial, sans-serif;
+}
+
+
+#container {
+	background-color: #4c566a;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	padding: 10px 20px;
+	background-color: #3b4252;
+}
+
+
+input {
+	padding: 10px 5px;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+	background-color: #5e81ac;
+	width: 100%;
+	margin: 20px 0;
+}
+
+button {
+	border: none;
+	outline: none;
+	background-color: #a3be8c;
+	padding: 10px 20px;
+	width: 100%;
+	font-weight: 700;
+}
+
+#todos {
+	background-color: #2e3440;
+}
+
+#todos .todo {
+	padding: 10px 20px;
+	color: #d8dee9;
+}
+
+#todos .todo.done {
+	  text-decoration: line-through;
+		color: grey;
+}

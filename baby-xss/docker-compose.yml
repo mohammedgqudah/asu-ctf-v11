@@ -1,0 +1,7 @@
+services:
+  challenge:
+    build: .
+    ports:
+      - 30002:3000
+    environment:
+      FLAG: 'ASU{testing_flag}'

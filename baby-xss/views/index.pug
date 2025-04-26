@@ -1,0 +1,17 @@
+html
+	head
+		title= title
+		link(href='/static/css/styles.css', rel='stylesheet')
+	body
+		div(id="container")
+			div
+				form(id="form")
+					h1 Add a new item to your todo list
+					label(for="item")
+						input(type="text", placeholder="Do something important...")
+						button(type="submit") Add TODO!
+				div(id="todos")
+				br
+				h2 Share your TODO list with your friends using this link!
+				input(id="share", disabled=true)
+		script(src='/static/js/dyn.js')

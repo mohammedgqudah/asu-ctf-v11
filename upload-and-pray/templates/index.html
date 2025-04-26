@@ -1,0 +1,70 @@
+<html>
+	<head>
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css">
+		<link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+
+	</head>
+	<body>
+		<div class="container">
+			<h1>
+				Upload a text file
+			</h1>	
+			<form method="POST" enctype="multipart/form-data">
+				<input type="file" name="file"/>	
+				<button>Upload!</button>
+			</form>
+			<h3>
+				Your uploaded files will appear below
+			</h3>	
+			<hr/>
+			<h4>
+				If your file contains<code>"flag()"</code>, you win!
+			</h4>
+			<small>
+				But before your file is sent to processing, the app makes sure the file doesn't contain <code>flag()</code>!
+			</small>
+			<ul>
+			  {% for file  in files %}
+				<li >{{ file }} | <a href="/process?filename={{ file }}">process file</a></li>
+			  {% endfor %}
+			</ul>
+		</div>
+	</body>
+	<style>
+		body {
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;    
+			  margin: 0;              
+			  height: 100vh;          
+			  width: 100vw;           
+			  box-sizing: border-box; 
+			max-width: unset;
+		}
+
+		@media (prefers-color-scheme: dark) {
+		:root {
+		  /* Set sans-serif & mono fonts */
+		  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+			"Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+			"Helvetica Neue", sans-serif;
+		  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+		  --standard-border-radius: 5px;
+
+		  /* Default (light) theme */
+		  --bg: #fff;
+		  --accent-bg: #f5f7ff;
+		  --text: #212121;
+		  --text-light: #585858;
+		  --border: #898EA4;
+		  --accent: #0d47a1;
+		  --accent-hover: #1266e2;
+		  --accent-text: var(--bg);
+		  --code: #d81b60;
+		  --preformatted: #444;
+		  --marked: #ffdd33;
+		  --disabled: #efefef;
+}
+		}
+	</style>
+</html>

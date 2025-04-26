@@ -1,0 +1,5 @@
+*.zip
+.venv/
+*.db
+*.pyc
+node_modules
